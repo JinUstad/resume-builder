@@ -11,6 +11,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjDse65oJj7AhUWSWwGHdCmCrUQFnoECA0QAQ&url=https%3A%2F%2Finternshala.com%2F&usg=AOvVaw02XSY4qaYHLe3YOqWGr9PV"
                   >
                     {" "}
@@ -23,7 +24,7 @@ function Job() {
               </div>
               <div className="col-md-4">
                 <div className="jonPortal">
-                 <a  target="_blank" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiHn6DZoZj7AhW8SmwGHaHgDW8QFnoECAoQAQ&url=https%3A%2F%2Fwww.naukri.com%2F&usg=AOvVaw2PLjBdivgAFLgeX2-AL0Fn">
+                 <a  target="_blank" rel="noopener noreferrer" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiHn6DZoZj7AhW8SmwGHaHgDW8QFnoECAoQAQ&url=https%3A%2F%2Fwww.naukri.com%2F&usg=AOvVaw2PLjBdivgAFLgeX2-AL0Fn">
                     <img
                       src="https://www.streettimes.in/wp-content/uploads/2018/07/Naukri.jpg"
                       alt=""
@@ -35,6 +36,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj8g6OIoZj7AhURS2wGHe97BEIQFnoECCUQAQ&url=https%3A%2F%2Fwww.monster.com%2F&usg=AOvVaw3Ba7A9fmQREPkZFIzDWr7i"
                   >
                     <img
@@ -48,6 +50,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiTlLeP_Zr7AhWc4zgGHXrcBAUQFnoECBsQAQ&url=https%3A%2F%2Fwww.linkedin.com%2Flogin&usg=AOvVaw0Nm71ZUGxfI8ojRjO8H1X_&cshid=1667786656166866"
                   >
                     <img
@@ -61,6 +64,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://telegram.org/"
                   >
                     <img
@@ -74,6 +78,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.hirist.com/register?&utm_source=google&utm_medium=CPC&utm_campaign=Brand_Search_Hirist&ref=google&gclid=CjwKCAiAvK2bBhB8EiwAZUbP1AkamFytMO6FdpPVKaNt2Ul5fExrRqQayneXx5bgB5JH11uAnjpljBoCgVIQAvD_BwE"
                   >
                     <img
@@ -87,6 +92,7 @@ function Job() {
                 <div className="jonPortal">
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiugP36v6L7AhUV0XMBHbuIDLgQFnoECA8QAQ&url=https%3A%2F%2Fin.indeed.com%2F&usg=AOvVaw1GuuN21b9EvW0ni08Q71Qp"
                   >
                     <img

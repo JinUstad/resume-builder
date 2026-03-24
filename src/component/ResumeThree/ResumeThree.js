@@ -319,11 +319,11 @@ const ResumeThree = forwardRef((props, ref) => {
       [sections.project, sections.education,sections.skills],
       [sections.workExp, sections.achievement,sections.summary],
     ]);
-  }, []);
+  }, [sections]);
 
   useEffect(() => {
     swapSourceTarget(source, target);
-  }, [source]);
+  }, [source, target]);
 
   useEffect(() => {
     const container = containerRef.current;

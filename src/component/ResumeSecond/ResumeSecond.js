@@ -4,7 +4,6 @@ import {
   Calendar,
   GitHub,
   Linkedin,
-  MapPin,
   Paperclip,
   Phone,
 } from "react-feather";
@@ -258,11 +257,11 @@ const Resume = forwardRef((props, ref) => {
       [sections.summary,sections.education,sections.project, sections.skills ,sections.achievement ],
       [],
     ]);
-  }, []);
+  }, [sections]);
 
   useEffect(() => {
     swapSourceTarget(source, target);
-  }, [source]);
+  }, [source, target]);
 
   useEffect(() => {
     const container = containerRef.current;
