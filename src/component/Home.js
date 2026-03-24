@@ -8,7 +8,7 @@ function Home() {
             <div className='overlayImage'>
                 <div className='brandingText'>
                     <div className='welComeText'>
-                        <h1>Wel Come to our World!</h1>
+                        <h1>Wel Come to our World!!</h1>
                         <p>Your resume describes your qualifications and what makes you unique. To stand out among other applicants, you need a resume that markets your strengths and match for the job. </p>
                         <center><Link to='/cvmaker' className='btn btn-success button'>Create Resume Click</Link></center>
                     </div>
