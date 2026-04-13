@@ -27,6 +27,19 @@ function EditorSecond(props) {
     github: activeInformation?.detail?.github || "",
     phone: activeInformation?.detail?.phone || "",
     email: activeInformation?.detail?.email || "",
+    overview: "",
+    link: "",
+    certificationLink: "",
+    companyName: "",
+    college: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    summary: "",
+    other: "",
+    points: Array.isArray(activeInformation?.points)
+      ? [...activeInformation.points]
+      : [],
   });
 
   const handlePointUpdate = (value, index) => {
@@ -79,22 +92,22 @@ function EditorSecond(props) {
         <label>Enter project description</label>
         <InputControl
           placeholder="Line 1"
-          value={values.points ? values.points[0] : ""}
+          value={values.points?.[0] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 0)}
         />
         <InputControl
           placeholder="Line 2"
-          value={values.points ? values.points[1] : ""}
+          value={values.points?.[1] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
           placeholder="Line 3"
-          value={values.points ? values.points[2] : ""}
+          value={values.points?.[2] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
         <InputControl
           placeholder="Line 4"
-          value={values.points ? values.points[3] : ""}
+          value={values.points?.[3] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 3)}
         />
       </div>
@@ -208,22 +221,22 @@ function EditorSecond(props) {
         <label>List your achievements</label>
         <InputControl
           placeholder="Line 1"
-          value={values.points ? values.points[0] : ""}
+          value={values.points?.[0] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 0)}
         />
         <InputControl
           placeholder="Line 2"
-          value={values.points ? values.points[1] : ""}
+          value={values.points?.[1] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
           placeholder="Line 3"
-          value={values.points ? values.points[2] : ""}
+          value={values.points?.[2] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
         <InputControl
           placeholder="Line 4"
-          value={values.points ? values.points[3] : ""}
+          value={values.points?.[3] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 3)}
         />
       </div>
@@ -493,13 +506,11 @@ function EditorSecond(props) {
         ? activeInfo.details[0]?.startDate || ""
         : "",
       endDate: activeInfo?.details ? activeInfo.details[0]?.endDate || "" : "",
-      points: activeInfo?.details
-        ? activeInfo.details[0]?.points
-          ? [...activeInfo.details[0]?.points]
-          : ""
-        : activeInfo?.points
+      points: activeInfo?.details?.[0]?.points
+        ? [...activeInfo.details[0].points]
+        : Array.isArray(activeInfo?.points)
         ? [...activeInfo.points]
-        : "",
+        : [],
       title: activeInfo?.details
         ? activeInfo.details[0]?.title || ""
         : activeInfo?.detail?.title || "",
@@ -523,21 +534,25 @@ function EditorSecond(props) {
     if (!details) return;
 
     const activeInfo = information[sections[activeSectionKey]];
-    setValues({
-      overview: activeInfo.details[activeDetailIndex]?.overview || "",
-      link: activeInfo.details[activeDetailIndex]?.link || "",
-      certificationLink:
-        activeInfo.details[activeDetailIndex]?.certificationLink || "",
-      companyName: activeInfo.details[activeDetailIndex]?.companyName || "",
-      location: activeInfo.details[activeDetailIndex]?.location || "",
-      startDate: activeInfo.details[activeDetailIndex]?.startDate || "",
-      endDate: activeInfo.details[activeDetailIndex]?.endDate || "",
-      points: activeInfo.details[activeDetailIndex]?.points || "",
-      title: activeInfo.details[activeDetailIndex]?.title || "",
-      linkedin: activeInfo.details[activeDetailIndex]?.linkedin || "",
-      github: activeInfo.details[activeDetailIndex]?.github || "",
-      college: activeInfo.details[activeDetailIndex]?.college || "",
-    });
+    const selectedDetail = activeInfo?.details?.[activeDetailIndex] || {};
+
+    setValues((prev) => ({
+      ...prev,
+      overview: selectedDetail.overview || "",
+      link: selectedDetail.link || "",
+      certificationLink: selectedDetail.certificationLink || "",
+      companyName: selectedDetail.companyName || "",
+      location: selectedDetail.location || "",
+      startDate: selectedDetail.startDate || "",
+      endDate: selectedDetail.endDate || "",
+      points: Array.isArray(selectedDetail.points)
+        ? [...selectedDetail.points]
+        : [],
+      title: selectedDetail.title || "",
+      linkedin: selectedDetail.linkedin || "",
+      github: selectedDetail.github || "",
+      college: selectedDetail.college || "",
+    }));
   }, [activeDetailIndex, activeInformation, activeSectionKey, information, sections]);
 
   return (

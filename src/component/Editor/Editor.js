@@ -27,6 +27,19 @@ function Editor(props) {
     github: activeInformation?.detail?.github || "",
     phone: activeInformation?.detail?.phone || "",
     email: activeInformation?.detail?.email || "",
+    overview: "",
+    link: "",
+    certificationLink: "",
+    companyName: "",
+    college: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    summary: "",
+    other: "",
+    points: Array.isArray(activeInformation?.points)
+      ? [...activeInformation.points]
+      : [],
   });
 
   const handlePointUpdate = (value, index) => {
@@ -102,17 +115,17 @@ function Editor(props) {
         <label>Enter work description</label>
         <InputControl
           placeholder="Line 1"
-          value={values.points ? values.points[0] : ""}
+          value={values.points?.[0] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 0)}
         />
         <InputControl
           placeholder="Line 2"
-          value={values.points ? values.points[1] : ""}
+          value={values.points?.[1] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
           placeholder="Line 3"
-          value={values.points ? values.points[2] : ""}
+          value={values.points?.[2] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
       </div>
@@ -160,22 +173,22 @@ function Editor(props) {
         <label>Enter project description</label>
         <InputControl
           placeholder="Line 1"
-          value={values.points ? values.points[0] : ""}
+          value={values.points?.[0] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 0)}
         />
         <InputControl
           placeholder="Line 2"
-          value={values.points ? values.points[1] : ""}
+          value={values.points?.[1] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
           placeholder="Line 3"
-          value={values.points ? values.points[2] : ""}
+          value={values.points?.[2] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
         <InputControl
           placeholder="Line 4"
-          value={values.points ? values.points[3] : ""}
+          value={values.points?.[3] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 3)}
         />
       </div>
@@ -289,22 +302,22 @@ function Editor(props) {
         <label>List your achievements</label>
         <InputControl
           placeholder="Line 1"
-          value={values.points ? values.points[0] : ""}
+          value={values.points?.[0] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 0)}
         />
         <InputControl
           placeholder="Line 2"
-          value={values.points ? values.points[1] : ""}
+          value={values.points?.[1] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 1)}
         />
         <InputControl
           placeholder="Line 3"
-          value={values.points ? values.points[2] : ""}
+          value={values.points?.[2] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 2)}
         />
         <InputControl
           placeholder="Line 4"
-          value={values.points ? values.points[3] : ""}
+          value={values.points?.[3] || ""}
           onChange={(event) => handlePointUpdate(event.target.value, 3)}
         />
       </div>
